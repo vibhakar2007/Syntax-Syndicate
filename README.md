@@ -35,7 +35,7 @@ To become a trusted creative and tech partner for brands globally, one website a
 
 ## Connect With Us
 
-- 🌐 Website: [https://thesyntaxsyndicate.netlify.app]*Currently Under Developemnt*
+- 🌐 Website: [https://thesyntaxsyndicate.netlify.app] *Currently Under Developemnt*
 - 📸 Instagram: [@syntax_syndicate](https://instagram.com/syntax_syndicate)
 - ✉️ Business Inquiries: [thesyntaxsyndicate@gmail.com](mailto:thesyntaxsyndicate@gmail.com)
 
