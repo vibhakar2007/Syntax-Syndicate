@@ -1,4 +1,4 @@
-# TheSyntaxSyndicate
+# The Syntax Syndicate (TSS)
 
 **A crew of devs, designers & digital hustlers.**
 
