@@ -80,6 +80,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --variant: oklch(0.37 0.2273 279.07);
   --complement: oklch(0.8 0.1428 181.63);
+  --font-poppins: "Poppins", sans-serif;
 }
 
 .dark {
