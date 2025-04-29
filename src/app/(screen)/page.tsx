@@ -10,10 +10,10 @@ export default function Home() {
         <br /> Had.
       </h1>
       <div className="flex items-center justify-center flex-row gap-4 pt-5">
-        <Button color="gray" variant="solid" className="bg-white text-black">
+        <Button color="gray" size={"lg"} variant={"default"} className="bg-white text-black">
           <Link href={"/work"}>Our Projects</Link>
         </Button>
-        <Button variant={"outline"} asChild>
+        <Button variant={"outline"} size={"lg"} asChild>
           <Link href={"/contact"}>Hire Us</Link>
         </Button>
       </div>
