@@ -49,7 +49,7 @@ const About = () => {
       {/* Buttons container */}
       <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 lg:mt-10">
         <Button asChild variant="default" className="text-xs md:text-sm lg:text-base px-4 md:px-6">
-          <Link href="/learn-more">Learn more &gt;</Link>
+          <Link href="/#work">Learn more &gt;</Link>
         </Button>
         <Button asChild variant="outline" className="text-xs md:text-sm lg:text-base px-4 md:px-6">
           <Link href="/contact">Hire Us</Link>
