@@ -52,7 +52,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={"/#about"} className="hover:text-complement">
+              <Link href={"/about"} className="hover:text-complement">
                 About
               </Link>
             </li>
@@ -102,7 +102,7 @@ const Header = () => {
             <Link href="/#services" onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <Link href="/#about" onClick={() => setIsOpen(false)}>
+            <Link href="/about" onClick={() => setIsOpen(false)}>
               About
             </Link>
           </div>

@@ -52,7 +52,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="hover:scale-110 transition-transform duration-200">
-              <Link href={"/#about"}>
+              <Link href={"/about"}>
                 About
               </Link>
             </li>
@@ -104,7 +104,7 @@ const Header = () => {
             <Link href="/#services" onClick={() => setIsOpen(false)} className="hover:scale-110 transition-transform duration-200">
               Services
             </Link>
-            <Link href="/#about" onClick={() => setIsOpen(false)} className="hover:scale-110 transition-transform duration-200">
+            <Link href="/about" onClick={() => setIsOpen(false)} className="hover:scale-110 transition-transform duration-200">
               About
             </Link>
           </div>
