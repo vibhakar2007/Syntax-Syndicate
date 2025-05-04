@@ -21,6 +21,7 @@
         "clsx": "^2.1.1",
         "eslint-config-prettier": "^10.1.2",
         "husky": "^9.1.7",
+        "lint-staged": "^15.5.1",
         "lucide-react": "^0.503.0",
         "motion": "^12.9.2",
         "next": "15.3.1",
