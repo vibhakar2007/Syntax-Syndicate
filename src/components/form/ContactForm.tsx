@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { useTransition } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,9 +13,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import sendMail from "@/lib/actions/sendMail";
+import { Loader2, Send } from "lucide-react";
+import { genHTMLForContactUsMail } from "@/lib/utils/mail/generate.mail";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -26,7 +30,7 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
-})
+});
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -36,11 +40,24 @@ const ContactForm = () => {
       email: "",
       message: "",
     },
-  })
+  });
 
+  const [isPending, startTransition] = useTransition();
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    console.log("Email Sent to SyntaxtSyndicate for ", data.email)
-  }
+    startTransition(async () => {
+      const mail = await sendMail({
+        subject: "Contact Us | SyntaxSyndicate",
+        html: genHTMLForContactUsMail(data),
+      });
+
+      if (!mail) {
+        console.error("Error sending email, Please try again later");
+        return;
+      }
+
+      console.log("Email Sent, We will reach out to you soon");
+    });
+  };
 
   return (
     <Form {...form}>
@@ -93,10 +110,16 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          disabled={isPending}
+          type="submit"
+          className="flex justify-center items-center gap-2"
+        >
+          Submit {isPending ? <Loader2 className="animate-spin" /> : <Send />}
+        </Button>
       </form>
     </Form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
