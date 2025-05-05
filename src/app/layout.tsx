@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "The Syntax Syndicate",
+  			title: "The Syntax Syndicate",
   description: "We deliver the best websites for your business",
 }
 
