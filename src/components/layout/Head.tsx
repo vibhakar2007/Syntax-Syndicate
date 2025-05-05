@@ -1,21 +1,21 @@
-"use client"
-import Image from "next/image"
-import { Button } from "../ui/button"
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+"use client";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
-  const [scroll, setScroll] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [scroll, setScroll] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY > 20)
-    }
-    document.addEventListener("scroll", handleScroll)
-    return () => document.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScroll(window.scrollY > 20);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
@@ -114,7 +114,7 @@ const Header = () => {
         </div>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
