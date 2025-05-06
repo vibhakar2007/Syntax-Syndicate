@@ -61,7 +61,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
         <FormField
           control={form.control}
           name="name"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 <Textarea
                   cols={8}
                   rows={10}
-                  className="h-[100px] resize-none md:w-[450px] w-[300px] flex"
+                  className=""
                   placeholder="e.g., We need expertise of SyntaxSyndicate to develop us the best website out there."
                   {...field}
                 />
