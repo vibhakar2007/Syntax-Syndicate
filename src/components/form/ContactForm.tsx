@@ -100,9 +100,7 @@ const ContactForm = () => {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  cols={8}
-                  rows={10}
-                  className=""
+                  rows={8}
                   placeholder="e.g., We need expertise of SyntaxSyndicate to develop us the best website out there."
                   {...field}
                 />
