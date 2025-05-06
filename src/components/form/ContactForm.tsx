@@ -102,7 +102,7 @@ const ContactForm = () => {
                 <Textarea
                   cols={8}
                   rows={10}
-                  className="resize-y"
+                  className="h-[100px] resize-none md:w-[450px] w-[300px] flex"
                   placeholder="e.g., We need expertise of SyntaxSyndicate to develop us the best website out there."
                   {...field}
                 />
