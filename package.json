@@ -5,6 +5,7 @@
   "scripts": {
     "full-check": "npm run lint && npm run pretty && npm run build",
     "prepare": "husky",
+    "pre-commit": "lint-staged",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -12,6 +13,17 @@
     "lint:fix": "next lint --fix",
     "pretty": "npx prettier . --check",
     "pretty:fix": "npx prettier . --write"
+  },
+  "lint-staged": {
+    "!(*.ts)": "prettier --write",
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
