@@ -47,7 +47,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={"/#services"} className="hover:text-complement">
+              <Link href={"/services"} className="hover:text-complement">
                 Services
               </Link>
             </li>
