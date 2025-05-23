@@ -45,7 +45,7 @@ const Header = () => {
               <Link href={"/#work"}>Work</Link>
             </li>
             <li className="hover:scale-110 transition-transform duration-200">
-              <Link href={"/#services"}>Services</Link>
+              <Link href={"/services"}>Services</Link>
             </li>
             <li className="hover:scale-110 transition-transform duration-200">
               <Link href={"/about"}>About</Link>
