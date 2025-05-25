@@ -26,14 +26,14 @@ const Header = () => {
       <nav className="container mx-auto grid place-items-center grid-cols-2 md:grid-cols-3 py-2">
         {/* Logo */}
         <div className="font-bold">
-          <Link href={"/#home"}>
+          <Link href={"/"}>
             <Image
               src="/assets/logo.png"
               alt="TSS logo"
               height={500}
               width={500}
               priority
-              className="size-20 object-cover hover:scale-110 transition-transform duration-300"
+              className="size-20 object-cover hover:scale-110 transition-transform duration-300 mix-blend-overlay"
             />
           </Link>
         </div>
@@ -42,7 +42,7 @@ const Header = () => {
         <div className="hidden md:block">
           <ul className="flex gap-4">
             <li>
-              <Link href={"/#work"} className="hover:text-complement">
+              <Link href={"/work"} className="hover:text-complement">
                 Work
               </Link>
             </li>
@@ -79,7 +79,7 @@ const Header = () => {
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md text-white flex flex-col h-screen">
           {/* Header */}
           <div className="flex justify-between items-center p-4 border-b border-white">
-            <Link href={"/#home"} onClick={() => setIsOpen(false)}>
+            <Link href={"/"} onClick={() => setIsOpen(false)}>
               <Image
                 src="/assets/logo-transparent.png"
                 alt="TSS logo"
@@ -96,10 +96,10 @@ const Header = () => {
 
           {/* Menu Items */}
           <div className="flex-1 flex flex-col justify-center items-center gap-6 text-xl font-semibold">
-            <Link href="/#work" onClick={() => setIsOpen(false)}>
+            <Link href="/work" onClick={() => setIsOpen(false)}>
               Work
             </Link>
-            <Link href="/#services" onClick={() => setIsOpen(false)}>
+            <Link href="/services" onClick={() => setIsOpen(false)}>
               Services
             </Link>
             <Link href="/about" onClick={() => setIsOpen(false)}>

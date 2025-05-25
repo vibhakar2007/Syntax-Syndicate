@@ -26,7 +26,7 @@ const Header = () => {
       <nav className="container mx-auto grid place-items-center grid-cols-2 md:grid-cols-3 py-2">
         {/* Logo */}
         <div className="font-bold">
-          <Link href={"/#home"}>
+          <Link href={"/"}>
             <Image
               src="/assets/logo.png"
               alt="TSS logo"
@@ -42,7 +42,7 @@ const Header = () => {
         <div className="hidden md:block">
           <ul className="flex gap-4">
             <li className="hover:scale-110 transition-transform duration-200">
-              <Link href={"/#work"}>Work</Link>
+              <Link href={"/work"}>Work</Link>
             </li>
             <li className="hover:scale-110 transition-transform duration-200">
               <Link href={"/services"}>Services</Link>
@@ -77,7 +77,7 @@ const Header = () => {
         >
           {/* Header */}
           <div className="flex justify-between items-center p-4 border-b border-white">
-            <Link href={"/#home"} onClick={() => setIsOpen(false)}>
+            <Link href={"/"} onClick={() => setIsOpen(false)}>
               <Image
                 src="/assets/logo-transparent.png"
                 alt="TSS logo"
@@ -95,14 +95,14 @@ const Header = () => {
           {/* Menu Items */}
           <div className="flex-1 flex flex-col justify-center items-center gap-6 text-xl font-semibold">
             <Link
-              href="/#work"
+              href="/work"
               onClick={() => setIsOpen(false)}
               className="hover:scale-110 transition-transform duration-200"
             >
               Work
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               onClick={() => setIsOpen(false)}
               className="hover:scale-110 transition-transform duration-200"
             >
