@@ -27,6 +27,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
+  subject: z.string().max(100, {
+    message: "Subject must be at most 100 characters.",
+  }),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
@@ -38,6 +41,7 @@ const ContactForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
@@ -94,13 +98,30 @@ const ContactForm = () => {
         />
         <FormField
           control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Subject (optional)</FormLabel>
+              <FormControl>
+                <Input
+                  type="text"
+                  placeholder="e.g., Building a new website"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  rows={8}
+                  className="min-h-28"
                   placeholder="e.g., We need expertise of SyntaxSyndicate to develop us the best website out there."
                   {...field}
                 />
