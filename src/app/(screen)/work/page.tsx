@@ -6,9 +6,7 @@ function Work() {
   return (
     <div className="container min-h-extended mx-auto mt-12 border rounded-3xl p-4">
       <div className="pl-4">
-        <h1 className="lg:text-4xl text-xl font-semibold leading-normal">
-          Project
-        </h1>
+        <h1 className="lg:text-4xl text-xl font-semibold">Project</h1>
         <p className="text-muted-foreground text-sm">
           A collection of my projects in web development, AI, and accessibility
         </p>
